@@ -1,4 +1,4 @@
-from calculator.calculator import Calculator
+from src.calculator.calculator import Calculator
 
 # This is a sample Python script.
 
