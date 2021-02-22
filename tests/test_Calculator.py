@@ -29,6 +29,12 @@ class CalculatorTestCase(unittest.TestCase):
         for row in test_data:
             result = float(row['Result'])
             self.assertEqual(self.calculator.mult(row['Value 1'], row['Value 2']), result)
+
+    def test_division(self):
+        test_data = CsvReader("../tests/Data/Unit Test Division.csv").data
+        for row in test_data:
+            result = float(row['Result'])
+            self.assertEqual(self.calculator.divi(row['Value 1'], row['Value 2']), result)
             self.assertEqual(self.calculator.result, result)
 
     def test_result_is_zero_calculator(self):
