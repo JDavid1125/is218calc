@@ -37,6 +37,13 @@ class CalculatorTestCase(unittest.TestCase):
             self.assertEqual(self.calculator.divi(row['Value 1'], row['Value 2']), result)
             self.assertEqual(self.calculator.result, result)
 
+    def test_square(self):
+        test_data = CsvReader("../tests/Data/Unit Test Square.csv").data
+        for row in test_data:
+            result = float(row['Result'])
+            self.assertEqual(self.calculator.squ(row['Value 1']), result)
+            self.assertEqual(self.calculator.result, result)
+
     def test_result_is_zero_calculator(self):
         self.assertEqual(self.calculator.result, 0)
 
