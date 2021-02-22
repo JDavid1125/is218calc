@@ -42,6 +42,12 @@ class CalculatorTestCase(unittest.TestCase):
         for row in test_data:
             result = float(row['Result'])
             self.assertEqual(self.calculator.squ(row['Value 1']), result)
+
+    def test_square_root(self):
+        test_data = CsvReader("../tests/Data/Unit Test Square Root.csv").data
+        for row in test_data:
+            result = float(row['Result'])
+            self.assertEqual(self.calculator.root(row['Value 1']), result)
             self.assertEqual(self.calculator.result, result)
 
     def test_result_is_zero_calculator(self):
