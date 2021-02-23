@@ -1,2 +1,7 @@
 def division(a, b):
-    return round(float(b) / float(a), 9)
+    try:
+        return round(float(b) / float(a), 9)
+    except ZeroDivisionError as err:
+        print('run-time error:', err)
+
+

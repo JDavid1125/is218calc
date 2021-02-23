@@ -50,6 +50,9 @@ class CalculatorTestCase(unittest.TestCase):
             self.assertEqual(self.calculator.root(row['Value 1']), result)
             self.assertEqual(self.calculator.result, result)
 
+    def test_divide_zero(self):
+        self.assertRaises(ZeroDivisionError, self.calculator.divi(0, 0))
+
     def test_result_is_zero_calculator(self):
         self.assertEqual(self.calculator.result, 0)
 
