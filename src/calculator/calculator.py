@@ -11,26 +11,32 @@ class Calculator:
     def __init__(self):
         pass
 
+    @staticmethod
     def add(self, a, b):
         self.result = addition(a, b)
         return self.result
-
+    
+    @staticmethod
     def sub(self, a, b):
         self.result = subtraction(a, b)
         return self.result
 
+    @staticmethod
     def mult(self, a, b):
         self.result = multiplication(a, b)
         return self.result
-
+    
+    @staticmethod
     def divi(self, a, b):
         self.result = division(a, b)
         return self.result
-
+    
+    @staticmethod
     def squ(self, a):
         self.result = square(a)
         return self.result
-
+    
+    @staticmethod
     def root(self, a):
         self.result = square_root(a)
         return self.result
